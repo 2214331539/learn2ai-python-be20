@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 600" font-family="'Segoe UI','Microsoft YaHei',sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#94a3b8"/>
+    </marker>
+    <style>
+      .mod{rx:12;ry:12;stroke-width:1.5;}
+      .num{font-size:13px;font-weight:700;fill:#fff;}
+      .tt{font-size:15px;font-weight:600;}
+      .ph{font-size:14px;font-weight:700;fill:#475569;}
+      .cap{font-size:12px;fill:#64748b;}
+    </style>
+  </defs>
+
+  <rect width="940" height="600" fill="#f8fafc"/>
+  <text x="40" y="46" font-size="26" font-weight="800" fill="#1e293b">Python 后端开发 · 课程路线图</text>
+  <text x="40" y="72" class="cap" font-size="13">两条主线交织：理解（语言 + 生态） × 产出（AI 协作下做出可部署的后端服务）</text>
+
+  <!-- phase labels -->
+  <text x="40" y="150" class="ph">① 打基础</text>
+  <text x="40" y="280" class="ph">② 搭服务</text>
+  <text x="40" y="410" class="ph">③ 加固</text>
+  <text x="40" y="540" class="ph">④ 综合</text>
+
+  <!-- Row 1: 0-3 基础 (indigo) -->
+  <g>
+    <rect class="mod" x="150" y="120" width="170" height="70" fill="#eef2ff" stroke="#4f46e5"/>
+    <circle cx="172" cy="142" r="13" fill="#4f46e5"/><text x="172" y="147" class="num" text-anchor="middle">0</text>
+    <text x="194" y="147" class="tt" fill="#312e81">环境与工作流</text>
+    <text x="172" y="172" class="cap">解释器 · venv · Git · AI 环境</text>
+
+    <rect class="mod" x="340" y="120" width="170" height="70" fill="#eef2ff" stroke="#4f46e5"/>
+    <circle cx="362" cy="142" r="13" fill="#4f46e5"/><text x="362" y="147" class="num" text-anchor="middle">1</text>
+    <text x="384" y="147" class="tt" fill="#312e81">语言精要</text>
+    <text x="362" y="172" class="cap">数据模型 · 推导式 · 异常</text>
+
+    <rect class="mod" x="530" y="120" width="170" height="70" fill="#eef2ff" stroke="#4f46e5"/>
+    <circle cx="552" cy="142" r="13" fill="#4f46e5"/><text x="552" y="147" class="num" text-anchor="middle">2</text>
+    <text x="574" y="147" class="tt" fill="#312e81">函数式与 OOP</text>
+    <text x="552" y="172" class="cap">装饰器 · dataclass · 类型</text>
+
+    <rect class="mod" x="720" y="120" width="170" height="70" fill="#eef2ff" stroke="#4f46e5"/>
+    <circle cx="742" cy="142" r="13" fill="#4f46e5"/><text x="742" y="147" class="num" text-anchor="middle">3</text>
+    <text x="764" y="147" class="tt" fill="#312e81">标准库与生态</text>
+    <text x="742" y="172" class="cap">选库地图 · 标准库</text>
+  </g>
+
+  <!-- Row 2: 4-7 搭服务 (teal) -->
+  <g>
+    <rect class="mod" x="150" y="250" width="170" height="70" fill="#f0fdfa" stroke="#0d9488"/>
+    <circle cx="172" cy="272" r="13" fill="#0d9488"/><text x="172" y="277" class="num" text-anchor="middle">4</text>
+    <text x="194" y="277" class="tt" fill="#115e59">HTTP 与第一个 API</text>
+    <text x="172" y="302" class="cap">REST · 状态码 · FastAPI</text>
+
+    <rect class="mod" x="340" y="250" width="170" height="70" fill="#f0fdfa" stroke="#0d9488"/>
+    <circle cx="362" cy="272" r="13" fill="#0d9488"/><text x="362" y="277" class="num" text-anchor="middle">5</text>
+    <text x="384" y="277" class="tt" fill="#115e59">校验与建模</text>
+    <text x="362" y="302" class="cap">Pydantic · 输入/输出模型</text>
+
+    <rect class="mod" x="530" y="250" width="170" height="70" fill="#f0fdfa" stroke="#0d9488"/>
+    <circle cx="552" cy="272" r="13" fill="#0d9488"/><text x="552" y="277" class="num" text-anchor="middle">6</text>
+    <text x="574" y="277" class="tt" fill="#115e59">数据持久化</text>
+    <text x="552" y="302" class="cap">SQL · ORM · 迁移</text>
+
+    <rect class="mod" x="720" y="250" width="170" height="70" fill="#f0fdfa" stroke="#0d9488"/>
+    <circle cx="742" cy="272" r="13" fill="#0d9488"/><text x="742" y="277" class="num" text-anchor="middle">7</text>
+    <text x="764" y="277" class="tt" fill="#115e59">异步编程</text>
+    <text x="742" y="302" class="cap">async/await · 事件循环</text>
+  </g>
+
+  <!-- Row 3: 8-10 加固 (amber) -->
+  <g>
+    <rect class="mod" x="150" y="380" width="170" height="70" fill="#fffbeb" stroke="#d97706"/>
+    <circle cx="172" cy="402" r="13" fill="#d97706"/><text x="172" y="407" class="num" text-anchor="middle">8</text>
+    <text x="194" y="407" class="tt" fill="#92400e">认证与安全 ★</text>
+    <text x="172" y="432" class="cap">JWT · 授权 · 安全审查</text>
+
+    <rect class="mod" x="340" y="380" width="170" height="70" fill="#fffbeb" stroke="#d97706"/>
+    <circle cx="362" cy="402" r="13" fill="#d97706"/><text x="362" y="407" class="num" text-anchor="middle">9</text>
+    <text x="384" y="407" class="tt" fill="#92400e">测试与质量 ★</text>
+    <text x="362" y="432" class="cap">pytest · 识破假通过</text>
+
+    <rect class="mod" x="530" y="380" width="170" height="70" fill="#fffbeb" stroke="#d97706"/>
+    <circle cx="552" cy="402" r="13" fill="#d97706"/><text x="552" y="407" class="num" text-anchor="middle">10</text>
+    <text x="574" y="407" class="tt" fill="#92400e">打包与部署</text>
+    <text x="552" y="432" class="cap">Docker · 12-factor</text>
+  </g>
+
+  <!-- Row 4: 11 综合 (rose) -->
+  <g>
+    <rect class="mod" x="150" y="510" width="360" height="60" fill="#fdf2f8" stroke="#db2777"/>
+    <circle cx="172" cy="540" r="13" fill="#db2777"/><text x="172" y="545" class="num" text-anchor="middle">11</text>
+    <text x="194" y="538" class="tt" fill="#9d174f">综合项目周 · 结课</text>
+    <text x="194" y="558" class="cap">独立用 AI 完成新需求 + 技术答辩</text>
+  </g>
+
+  <!-- connecting arrows -->
+  <path d="M320 300 L335 300" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)" fill="none"/>
+  <path d="M510 300 L525 300" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)" fill="none"/>
+  <path d="M700 300 L715 300" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)" fill="none"/>
+  <path d="M320 430 L335 430" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)" fill="none"/>
+  <path d="M510 430 L525 430" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)" fill="none"/>
+
+  <!-- legend ★ -->
+  <text x="600" y="548" class="cap" font-size="13">★ = AI 代码判断力训练的重点模块</text>
+</svg>
