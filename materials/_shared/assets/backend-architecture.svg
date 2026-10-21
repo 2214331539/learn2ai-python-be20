@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 520" font-family="'Segoe UI','Microsoft YaHei',sans-serif">
+  <defs>
+    <marker id="d" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 Z" fill="#94a3b8"/></marker>
+  </defs>
+  <rect width="760" height="520" fill="#f8fafc"/>
+  <text x="40" y="46" font-size="24" font-weight="800" fill="#1e293b">后端分层架构（贯穿项目）</text>
+  <text x="40" y="70" font-size="13" fill="#64748b">请求自上而下穿过每一层，每层各司其职、便于测试与替换</text>
+
+  <g text-anchor="middle">
+    <rect x="200" y="95" width="360" height="56" rx="12" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.5"/>
+    <text x="380" y="122" font-size="16" font-weight="700" fill="#312e81">路由 Router (routers/)</text>
+    <text x="380" y="141" font-size="11" fill="#64748b">收请求、调逻辑、返响应 —— 不写业务细节</text>
+
+    <rect x="200" y="175" width="360" height="56" rx="12" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.5"/>
+    <text x="380" y="202" font-size="16" font-weight="700" fill="#115e59">校验 Schemas (schemas.py)</text>
+    <text x="380" y="221" font-size="11" fill="#64748b">Pydantic 输入/输出模型 · 不信任外部输入</text>
+
+    <rect x="200" y="255" width="360" height="56" rx="12" fill="#fffbeb" stroke="#d97706" stroke-width="1.5"/>
+    <text x="380" y="282" font-size="16" font-weight="700" fill="#92400e">业务/安全 Core (core/)</text>
+    <text x="380" y="301" font-size="11" fill="#64748b">认证授权 · 密码哈希 · JWT · 配置</text>
+
+    <rect x="200" y="335" width="360" height="56" rx="12" fill="#faf5ff" stroke="#9333ea" stroke-width="1.5"/>
+    <text x="380" y="362" font-size="16" font-weight="700" fill="#6b21a8">模型 Models (models.py)</text>
+    <text x="380" y="381" font-size="11" fill="#64748b">SQLAlchemy ORM · 表结构映射</text>
+
+    <rect x="200" y="415" width="360" height="56" rx="12" fill="#f1f5f9" stroke="#475569" stroke-width="1.5"/>
+    <text x="380" y="442" font-size="16" font-weight="700" fill="#1e293b">数据库 Database</text>
+    <text x="380" y="461" font-size="11" fill="#64748b">SQLite (开发) / PostgreSQL (生产)</text>
+  </g>
+
+  <!-- arrows between layers -->
+  <path d="M380 151 L380 173" stroke="#94a3b8" stroke-width="2" marker-end="url(#d)"/>
+  <path d="M380 231 L380 253" stroke="#94a3b8" stroke-width="2" marker-end="url(#d)"/>
+  <path d="M380 311 L380 333" stroke="#94a3b8" stroke-width="2" marker-end="url(#d)"/>
+  <path d="M380 391 L380 413" stroke="#94a3b8" stroke-width="2" marker-end="url(#d)"/>
+
+  <!-- cross-cutting -->
+  <rect x="600" y="95" width="130" height="376" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-dasharray="5 4"/>
+  <text x="665" y="120" text-anchor="middle" font-size="13" font-weight="700" fill="#475569">贯穿关注点</text>
+  <text x="665" y="150" text-anchor="middle" font-size="12" fill="#64748b">日志</text>
+  <text x="665" y="178" text-anchor="middle" font-size="12" fill="#64748b">测试</text>
+  <text x="665" y="206" text-anchor="middle" font-size="12" fill="#64748b">配置</text>
+  <text x="665" y="234" text-anchor="middle" font-size="12" fill="#64748b">错误处理</text>
+
+  <rect x="30" y="95" width="130" height="376" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-dasharray="5 4"/>
+  <text x="95" y="120" text-anchor="middle" font-size="13" font-weight="700" fill="#475569">对应模块</text>
+  <text x="95" y="150" text-anchor="middle" font-size="12" fill="#64748b">模块 4</text>
+  <text x="95" y="206" text-anchor="middle" font-size="12" fill="#64748b">模块 5</text>
+  <text x="95" y="286" text-anchor="middle" font-size="12" fill="#64748b">模块 8</text>
+  <text x="95" y="366" text-anchor="middle" font-size="12" fill="#64748b">模块 6</text>
+</svg>
