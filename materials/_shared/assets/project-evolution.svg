@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" font-family="'Segoe UI','Microsoft YaHei',sans-serif">
+  <defs>
+    <marker id="pe" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 Z" fill="#6366f1"/></marker>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#c7d2fe"/><stop offset="1" stop-color="#5b21b6"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="360" fill="#f8fafc"/>
+  <text x="40" y="44" font-size="24" font-weight="800" fill="#1e293b">贯穿项目的成长：从脚本到可部署服务</text>
+  <text x="40" y="68" font-size="13" fill="#64748b">个人任务/书签 API —— 每个模块加一层能力，结课即得一个作品集项目</text>
+
+  <!-- growth bar -->
+  <rect x="40" y="86" width="880" height="8" rx="4" fill="url(#g)"/>
+
+  <g font-size="12">
+    <!-- S0 -->
+    <circle cx="70" cy="130" r="8" fill="#6366f1"/>
+    <text x="70" y="160" text-anchor="middle" font-weight="700" fill="#3730a3">S0</text>
+    <text x="70" y="180" text-anchor="middle" fill="#475569">内存脚本</text>
+    <text x="70" y="196" text-anchor="middle" fill="#94a3b8">模块 0-1</text>
+
+    <circle cx="180" cy="130" r="8" fill="#6366f1"/>
+    <text x="180" y="160" text-anchor="middle" font-weight="700" fill="#3730a3">S1</text>
+    <text x="180" y="180" text-anchor="middle" fill="#475569">FastAPI 雏形</text>
+    <text x="180" y="196" text-anchor="middle" fill="#94a3b8">模块 4</text>
+
+    <circle cx="290" cy="130" r="8" fill="#6366f1"/>
+    <text x="290" y="160" text-anchor="middle" font-weight="700" fill="#3730a3">S2</text>
+    <text x="290" y="180" text-anchor="middle" fill="#475569">Pydantic 校验</text>
+    <text x="290" y="196" text-anchor="middle" fill="#94a3b8">模块 5</text>
+
+    <circle cx="400" cy="130" r="8" fill="#7c3aed"/>
+    <text x="400" y="160" text-anchor="middle" font-weight="700" fill="#5b21b6">S3</text>
+    <text x="400" y="180" text-anchor="middle" fill="#475569">数据库持久化</text>
+    <text x="400" y="196" text-anchor="middle" fill="#94a3b8">模块 6</text>
+
+    <circle cx="510" cy="130" r="8" fill="#7c3aed"/>
+    <text x="510" y="160" text-anchor="middle" font-weight="700" fill="#5b21b6">S4</text>
+    <text x="510" y="180" text-anchor="middle" fill="#475569">异步化</text>
+    <text x="510" y="196" text-anchor="middle" fill="#94a3b8">模块 7</text>
+
+    <circle cx="620" cy="130" r="8" fill="#7c3aed"/>
+    <text x="620" y="160" text-anchor="middle" font-weight="700" fill="#5b21b6">S5</text>
+    <text x="620" y="180" text-anchor="middle" fill="#475569">认证 + 授权</text>
+    <text x="620" y="196" text-anchor="middle" fill="#94a3b8">模块 8</text>
+
+    <circle cx="730" cy="130" r="8" fill="#6d28d9"/>
+    <text x="730" y="160" text-anchor="middle" font-weight="700" fill="#5b21b6">S6</text>
+    <text x="730" y="180" text-anchor="middle" fill="#475569">测试 + 质量</text>
+    <text x="730" y="196" text-anchor="middle" fill="#94a3b8">模块 9</text>
+
+    <circle cx="840" cy="130" r="8" fill="#6d28d9"/>
+    <text x="840" y="160" text-anchor="middle" font-weight="700" fill="#5b21b6">S7</text>
+    <text x="840" y="180" text-anchor="middle" fill="#475569">Docker 部署</text>
+    <text x="840" y="196" text-anchor="middle" fill="#94a3b8">模块 10</text>
+  </g>
+
+  <!-- capstone -->
+  <rect x="300" y="250" width="360" height="66" rx="14" fill="#fdf2f8" stroke="#db2777" stroke-width="1.5"/>
+  <text x="480" y="280" text-anchor="middle" font-size="16" font-weight="700" fill="#9d174f">S8 · 结课：独立加一个新功能</text>
+  <text x="480" y="302" text-anchor="middle" font-size="12" fill="#64748b">模块 11 · 技术答辩讲清每个决策</text>
+  <path d="M480 206 L480 248" stroke="#6366f1" stroke-width="2" marker-end="url(#pe)"/>
+</svg>
