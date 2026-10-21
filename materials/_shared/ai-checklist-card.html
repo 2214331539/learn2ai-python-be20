@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 协作检查清单 · 速查卡</title>
+<style>
+  @page{size:A4;margin:14mm;}
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:'Segoe UI','Microsoft YaHei',system-ui,sans-serif;color:#1e293b;
+       background:#eef2f7;line-height:1.5;}
+  .page{max-width:820px;margin:24px auto;background:#fff;padding:34px 38px;border-radius:12px;
+        box-shadow:0 6px 30px rgba(15,23,42,.08);}
+  h1{font-size:25px;margin:0 0 4px;color:#4338ca;}
+  .tagline{color:#64748b;font-size:13px;margin:0 0 22px;border-left:3px solid #4f46e5;padding-left:10px;}
+  .cols{column-count:2;column-gap:26px;}
+  section{break-inside:avoid;margin-bottom:16px;}
+  h2{font-size:14px;font-weight:800;margin:0 0 8px;padding:5px 10px;border-radius:7px;color:#fff;}
+  .s1 h2{background:#4f46e5;} .s2 h2{background:#0d9488;} .s3 h2{background:#dc2626;}
+  .s4 h2{background:#9333ea;} .s5 h2{background:#d97706;} .s6 h2{background:#0369a1;}
+  ul{margin:0;padding:0;list-style:none;}
+  li{font-size:12.5px;padding:3px 0 3px 22px;position:relative;}
+  li::before{content:"";position:absolute;left:0;top:4px;width:13px;height:13px;border:1.5px solid #94a3b8;border-radius:4px;}
+  .danger li::before{border-color:#dc2626;}
+  .note{font-size:12px;color:#475569;background:#f1f5f9;border-radius:8px;padding:10px 12px;margin-top:4px;}
+  .foot{margin-top:18px;border-top:1px solid #e2e8f0;padding-top:12px;color:#94a3b8;font-size:11px;
+        display:flex;justify-content:space-between;}
+  @media print{body{background:#fff;}.page{box-shadow:none;margin:0;border-radius:0;max-width:none;}}
+</style>
+</head>
+<body>
+<div class="page">
+  <h1>🧭 AI 协作检查清单</h1>
+  <p class="tagline">核心原则：AI 负责产出草稿，你负责判断与把关 —— 责任永远在你这边。</p>
+
+  <div class="cols">
+    <section class="s1"><h2>① 提需求前：想清楚再开口</h2>
+      <ul>
+        <li>目标：一句话说清要做什么</li>
+        <li>输入 / 输出：数据从哪来、长什么样、要返回什么</li>
+        <li>约束：框架/库版本、性能、禁用依赖</li>
+        <li>边界：空值、超大输入、并发、出错怎么办</li>
+        <li>上下文：贴相关代码/模型/报错，别让它猜</li>
+      </ul>
+    </section>
+
+    <section class="s2"><h2>② 拿到代码：先读后跑</h2>
+      <ul>
+        <li>我能逐行解释它在做什么吗？</li>
+        <li>用到的库/函数/参数真实存在吗？</li>
+        <li>依赖是否最小、无过度设计？</li>
+        <li>错误处理在哪？异常会被悄悄吞掉吗？</li>
+        <li>边界条件处理了吗？</li>
+        <li>有没有把密钥/密码写死在代码里？</li>
+      </ul>
+    </section>
+
+    <section class="s3 danger"><h2>③ 安全红线（后端尤其盯）</h2>
+      <ul>
+        <li>SQL/命令注入：有没有字符串拼接？必须参数化</li>
+        <li>越权：校验“这条数据是不是他的”，而非只“登录了没”</li>
+        <li>密码：用 bcrypt/argon2，不明文、不 md5</li>
+        <li>输入校验：外部输入先过 schema 再用</li>
+        <li>密钥：从环境变量读，不硬编码进仓库</li>
+      </ul>
+    </section>
+
+    <section class="s4"><h2>④ 绝不全权交给 AI</h2>
+      <ul>
+        <li>生产数据库的删除 / 迁移</li>
+        <li>密钥、凭据、权限边界设计</li>
+        <li>涉及钱、隐私、对外发布的最终决策</li>
+      </ul>
+      <div class="note">以上 AI 可给建议，但必须由你审查后手动把关。</div>
+    </section>
+
+    <section class="s5"><h2>⑤ 调试协作</h2>
+      <ul>
+        <li>给 AI：完整报错 + 栈追踪 + 相关代码 + 你试过什么</li>
+        <li>先问“为什么会错”，别盲目复制“换个写法”</li>
+      </ul>
+    </section>
+
+    <section class="s6"><h2>⑥ 作业里的协作记录</h2>
+      <ul>
+        <li>我让 AI 做了什么（关键提示）</li>
+        <li>我改了/否决了哪些地方，为什么</li>
+        <li>我做了哪些验证（跑了什么、测了什么边界）</li>
+      </ul>
+      <div class="note">考核的是你的判断力，不是代码出自谁。坦诚写不扣分，隐瞒才会。</div>
+    </section>
+  </div>
+
+  <div class="foot">
+    <span>Python 后端开发课程 · 贯穿资料</span>
+    <span>打印此页随身携带，每次与 AI 协作时走一遍</span>
+  </div>
+</div>
+</body>
+</html>
