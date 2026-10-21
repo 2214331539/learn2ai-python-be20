@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Python 后端开发 · 课程主页</title>
+<style>
+  :root{
+    --indigo:#4f46e5; --teal:#0d9488; --amber:#d97706; --rose:#db2777;
+    --ink:#1e293b; --muted:#64748b; --line:#e2e8f0; --bg:#f8fafc;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:'Segoe UI','Microsoft YaHei',system-ui,sans-serif;
+       color:var(--ink);background:var(--bg);line-height:1.6;}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 24px 80px;}
+  header{background:linear-gradient(135deg,#4f46e5,#7c3aed);color:#fff;padding:56px 0 48px;}
+  header .wrap{padding-bottom:0;}
+  h1{margin:0 0 8px;font-size:34px;font-weight:800;}
+  .sub{font-size:16px;opacity:.92;max-width:680px;}
+  .pill{display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.3);
+        padding:4px 12px;border-radius:999px;font-size:13px;margin-top:16px;}
+  h2{font-size:22px;margin:48px 0 8px;display:flex;align-items:center;gap:8px;}
+  h2 .bar{width:5px;height:22px;background:var(--indigo);border-radius:3px;}
+  .lead{color:var(--muted);margin:0 0 20px;}
+  .lines{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px;}
+  .line{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px 22px;}
+  .line h3{margin:0 0 6px;font-size:17px;}
+  .line.a h3{color:var(--indigo);} .line.b h3{color:var(--teal);}
+  .line p{margin:0;color:var(--muted);font-size:14px;}
+  .roadmap{width:100%;border:1px solid var(--line);border-radius:14px;margin-top:16px;background:#fff;}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px;margin-top:20px;}
+  .card{display:block;text-decoration:none;color:inherit;background:#fff;border:1px solid var(--line);
+        border-radius:12px;padding:16px 18px;transition:.15s;border-left:4px solid var(--c,#4f46e5);}
+  .card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(15,23,42,.08);}
+  .card .n{font-size:12px;font-weight:700;color:var(--c,#4f46e5);letter-spacing:.5px;}
+  .card .t{font-size:16px;font-weight:600;margin:2px 0 4px;}
+  .card .d{font-size:13px;color:var(--muted);}
+  .res{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;margin-top:20px;}
+  .res a{text-decoration:none;color:inherit;background:#fff;border:1px solid var(--line);border-radius:12px;
+         padding:16px 18px;display:block;}
+  .res a:hover{border-color:var(--indigo);}
+  .res .t{font-weight:600;margin-bottom:4px;}
+  .res .d{font-size:13px;color:var(--muted);}
+  footer{color:var(--muted);font-size:13px;margin-top:56px;border-top:1px solid var(--line);padding-top:20px;}
+  .tag{font-size:11px;background:#fef3c7;color:#92400e;border-radius:6px;padding:1px 6px;margin-left:6px;}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>Python 后端开发</h1>
+    <div class="sub">在 AI 时代，这门课教的不是背语法，而是让你建立足够扎实的心智模型，从而能<b>指挥、读懂、验证、调试</b> AI 写出来的后端代码。</div>
+    <span class="pill">12 个模块 · 一个贯穿项目 · AI 协作贯穿始终</span>
+  </div>
+</header>
+
+<div class="wrap">
+  <h2><span class="bar"></span>两条主线</h2>
+  <div class="lines">
+    <div class="line a"><h3>主线 A · 理解</h3><p>Python 语言特性 + 后端生态地图。读得懂代码，才能判断 AI 给的东西对不对、好不好、安不安全。</p></div>
+    <div class="line b"><h3>主线 B · 产出</h3><p>在 AI 协作下，把需求做成一个能跑、能测、能部署的后端服务。一套可复现工作流：需求→提示→生成→验证→迭代。</p></div>
+  </div>
+
+  <h2><span class="bar"></span>课程路线图</h2>
+  <p class="lead">四个阶段，循序渐进。★ 为 AI 代码判断力训练的重点模块。</p>
+  <img class="roadmap" src="_shared/assets/course-roadmap.svg" alt="课程路线图">
+
+  <h2><span class="bar"></span>模块导航</h2>
+  <div class="grid">
+    <a class="card" style="--c:#4f46e5" href="00-setup/README.md"><div class="n">模块 0</div><div class="t">环境与工作流</div><div class="d">解释器 · venv · Git · AI 环境</div></a>
+    <a class="card" style="--c:#4f46e5" href="01-language/README.md"><div class="n">模块 1</div><div class="t">语言精要</div><div class="d">数据模型 · 推导式 · 异常</div></a>
+    <a class="card" style="--c:#4f46e5" href="02-functions-oop/README.md"><div class="n">模块 2</div><div class="t">函数式与 OOP</div><div class="d">装饰器 · dataclass · 类型注解</div></a>
+    <a class="card" style="--c:#4f46e5" href="03-stdlib-ecosystem/README.md"><div class="n">模块 3</div><div class="t">标准库与生态</div><div class="d">选库地图 · 标准库</div></a>
+    <a class="card" style="--c:#0d9488" href="04-http-api/README.md"><div class="n">模块 4</div><div class="t">HTTP 与第一个 API</div><div class="d">REST · 状态码 · FastAPI</div></a>
+    <a class="card" style="--c:#0d9488" href="05-validation/README.md"><div class="n">模块 5</div><div class="t">校验与建模</div><div class="d">Pydantic · 输入/输出模型</div></a>
+    <a class="card" style="--c:#0d9488" href="06-persistence/README.md"><div class="n">模块 6</div><div class="t">数据持久化</div><div class="d">SQL · ORM · 迁移</div></a>
+    <a class="card" style="--c:#0d9488" href="07-async/README.md"><div class="n">模块 7</div><div class="t">异步编程</div><div class="d">async/await · 事件循环</div></a>
+    <a class="card" style="--c:#d97706" href="08-auth-security/README.md"><div class="n">模块 8</div><div class="t">认证与安全<span class="tag">★ 重点</span></div><div class="d">JWT · 授权 · 安全审查</div></a>
+    <a class="card" style="--c:#d97706" href="09-testing/README.md"><div class="n">模块 9</div><div class="t">测试与质量<span class="tag">★ 重点</span></div><div class="d">pytest · 识破假通过</div></a>
+    <a class="card" style="--c:#d97706" href="10-deploy/README.md"><div class="n">模块 10</div><div class="t">打包与部署</div><div class="d">Docker · 12-factor</div></a>
+    <a class="card" style="--c:#db2777" href="11-capstone/README.md"><div class="n">模块 11</div><div class="t">综合项目周</div><div class="d">独立实战 + 技术答辩</div></a>
+  </div>
+
+  <h2><span class="bar"></span>贯穿资料与速查</h2>
+  <div class="res">
+    <a href="_shared/ai-checklist-card.html"><div class="t">🧭 AI 协作检查清单（速查卡）</div><div class="d">交互网页版，可打印成 PDF 随身用</div></a>
+    <a href="_shared/http-reference.html"><div class="t">🌐 HTTP 方法与状态码速查</div><div class="d">交互式参考页</div></a>
+    <a href="_shared/ecosystem-map.md"><div class="t">🗺 后端选库地图</div><div class="d">任务→工具的心智索引</div></a>
+    <a href="_shared/glossary.md"><div class="t">📖 术语表</div><div class="d">分类速查</div></a>
+    <a href="project/README.md"><div class="t">🚀 贯穿项目说明</div><div class="d">任务/书签 API · S0→S8 演进</div></a>
+  </div>
+
+  <h2><span class="bar"></span>图解资料</h2>
+  <p class="lead">穿插在各模块讲义中的可视化图（SVG，可缩放）：</p>
+  <div class="res">
+    <a href="_shared/assets/http-lifecycle.svg"><div class="t">HTTP 请求生命周期</div><div class="d">模块 4</div></a>
+    <a href="_shared/assets/backend-architecture.svg"><div class="t">后端分层架构</div><div class="d">模块 4–8</div></a>
+    <a href="_shared/assets/sync-vs-async.svg"><div class="t">同步 vs 异步</div><div class="d">模块 7</div></a>
+    <a href="_shared/assets/project-evolution.svg"><div class="t">项目演进 S0→S8</div><div class="d">贯穿</div></a>
+  </div>
+
+  <footer>
+    Python 后端开发课程 · 本页为课程资料总入口。Markdown 讲义、SVG 图解、HTML 速查、PDF 讲义相互补充。<br>
+    建议在浏览器中打开本页浏览，在编辑器/仓库中阅读 Markdown 讲义。
+  </footer>
+</div>
+</body>
+</html>
