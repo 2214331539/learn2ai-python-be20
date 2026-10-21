@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 430" font-family="'Segoe UI','Microsoft YaHei',sans-serif">
+  <defs>
+    <marker id="af" markerWidth="11" markerHeight="11" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#4f46e5"/></marker>
+  </defs>
+  <rect width="880" height="430" fill="#f8fafc"/>
+  <text x="40" y="44" font-size="23" font-weight="800" fill="#1e293b">认证与授权流程</text>
+  <text x="40" y="68" font-size="13" fill="#64748b">认证=证明你是谁（登录）；授权=决定你能动哪些数据（归属校验）</text>
+
+  <!-- register -->
+  <rect x="40" y="92" width="380" height="110" rx="14" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.3"/>
+  <text x="60" y="118" font-size="15" font-weight="700" fill="#312e81">① 注册</text>
+  <rect x="60" y="130" width="150" height="40" rx="8" fill="#fff" stroke="#c7d2fe"/><text x="135" y="155" text-anchor="middle" font-size="12" fill="#334155">密码</text>
+  <rect x="250" y="130" width="150" height="40" rx="8" fill="#fff" stroke="#c7d2fe"/><text x="325" y="155" text-anchor="middle" font-size="12" fill="#334155">bcrypt 哈希后存库</text>
+  <path d="M210 150 L248 150" stroke="#4f46e5" stroke-width="2" marker-end="url(#af)"/>
+  <text x="60" y="192" font-size="11" fill="#b91c1c">绝不明文/md5 存储</text>
+
+  <!-- login -->
+  <rect x="460" y="92" width="380" height="110" rx="14" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.3"/>
+  <text x="480" y="118" font-size="15" font-weight="700" fill="#115e59">② 登录</text>
+  <rect x="480" y="130" width="130" height="40" rx="8" fill="#fff" stroke="#99f6e4"/><text x="545" y="155" text-anchor="middle" font-size="12" fill="#334155">验密码</text>
+  <rect x="650" y="130" width="170" height="40" rx="8" fill="#fff" stroke="#99f6e4"/><text x="735" y="155" text-anchor="middle" font-size="12" fill="#115e59">签发 JWT（带过期）</text>
+  <path d="M610 150 L648 150" stroke="#0d9488" stroke-width="2" marker-end="url(#af)"/>
+
+  <!-- protected request -->
+  <rect x="40" y="226" width="800" height="130" rx="14" fill="#fffbeb" stroke="#d97706" stroke-width="1.3"/>
+  <text x="60" y="252" font-size="15" font-weight="700" fill="#92400e">③ 带 JWT 访问受保护端点</text>
+  <rect x="60" y="266" width="140" height="44" rx="8" fill="#fff" stroke="#fcd34d"/><text x="130" y="293" text-anchor="middle" font-size="12" fill="#334155">请求 + Bearer token</text>
+  <rect x="230" y="266" width="130" height="44" rx="8" fill="#fff" stroke="#fcd34d"/><text x="295" y="288" text-anchor="middle" font-size="12" fill="#334155">验签/未过期</text><text x="295" y="304" text-anchor="middle" font-size="10" fill="#64748b">→ 认证</text>
+  <rect x="390" y="266" width="200" height="44" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="1.6"/><text x="490" y="288" text-anchor="middle" font-size="12" font-weight="700" fill="#92400e">这条数据是他的吗？</text><text x="490" y="304" text-anchor="middle" font-size="10" fill="#b45309">→ 授权（关键！）</text>
+  <rect x="620" y="266" width="100" height="44" rx="8" fill="#dcfce7" stroke="#16a34a"/><text x="670" y="293" text-anchor="middle" font-size="12" fill="#15803d">是 → 返回</text>
+  <rect x="740" y="266" width="80" height="44" rx="8" fill="#fee2e2" stroke="#dc2626"/><text x="780" y="293" text-anchor="middle" font-size="12" fill="#b91c1c">否 → 403</text>
+  <path d="M200 288 L228 288" stroke="#d97706" stroke-width="2" marker-end="url(#af)"/>
+  <path d="M360 288 L388 288" stroke="#d97706" stroke-width="2" marker-end="url(#af)"/>
+  <path d="M590 288 L618 288" stroke="#d97706" stroke-width="2" marker-end="url(#af)"/>
+  <text x="60" y="340" font-size="12" fill="#b91c1c">只做认证、漏掉授权归属校验 = 越权漏洞(IDOR)：把 id 换成别人的就能读改别人数据</text>
+
+  <path d="M250 202 L250 224" stroke="#94a3b8" stroke-width="1.6" marker-end="url(#af)"/>
+  <path d="M650 202 L650 224" stroke="#94a3b8" stroke-width="1.6" marker-end="url(#af)"/>
+</svg>

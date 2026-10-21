@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 360" font-family="'Segoe UI','Microsoft YaHei',sans-serif">
+  <defs>
+    <marker id="dc" markerWidth="11" markerHeight="11" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#4f46e5"/></marker>
+  </defs>
+  <rect width="840" height="360" fill="#f8fafc"/>
+  <text x="40" y="44" font-size="23" font-weight="800" fill="#1e293b">装饰器：把原函数“包”进一层增强</text>
+  <text x="40" y="68" font-size="13" fill="#64748b">@timer 等价于 func = timer(func)。调用时先进 wrapper，再调原函数。</text>
+
+  <!-- original -->
+  <rect x="60" y="110" width="150" height="70" rx="12" fill="#eef2ff" stroke="#4f46e5"/>
+  <text x="135" y="140" text-anchor="middle" font-size="14" font-weight="700" fill="#312e81">原函数</text>
+  <text x="135" y="162" text-anchor="middle" font-size="12" font-family="Consolas,monospace" fill="#4338ca">slow_square</text>
+
+  <text x="250" y="150" text-anchor="middle" font-size="22" fill="#94a3b8">+</text>
+
+  <rect x="300" y="110" width="150" height="70" rx="12" fill="#fff7ed" stroke="#d97706"/>
+  <text x="375" y="140" text-anchor="middle" font-size="14" font-weight="700" fill="#92400e">@timer</text>
+  <text x="375" y="162" text-anchor="middle" font-size="12" fill="#b45309">计时增强</text>
+
+  <text x="490" y="150" text-anchor="middle" font-size="22" fill="#94a3b8">=</text>
+
+  <!-- wrapped -->
+  <rect x="540" y="96" width="250" height="110" rx="14" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.5"/>
+  <text x="665" y="122" text-anchor="middle" font-size="13" font-weight="700" fill="#115e59">wrapper（增强后的函数）</text>
+  <rect x="640" y="140" width="110" height="46" rx="10" fill="#eef2ff" stroke="#4f46e5"/>
+  <text x="695" y="168" text-anchor="middle" font-size="12" font-family="Consolas,monospace" fill="#4338ca">slow_square</text>
+  <text x="565" y="166" font-size="11" fill="#115e59">计时·日志</text>
+
+  <!-- call flow -->
+  <text x="40" y="250" font-size="14" font-weight="700" fill="#475569">调用时发生了什么：</text>
+  <g font-size="12" fill="#334155">
+    <rect x="60" y="270" width="150" height="40" rx="8" fill="#fff" stroke="#cbd5e1"/><text x="135" y="295" text-anchor="middle">① 记录开始时间</text>
+    <rect x="250" y="270" width="150" height="40" rx="8" fill="#fff" stroke="#cbd5e1"/><text x="325" y="295" text-anchor="middle">② 调用原函数</text>
+    <rect x="440" y="270" width="150" height="40" rx="8" fill="#fff" stroke="#cbd5e1"/><text x="515" y="295" text-anchor="middle">③ 算耗时·打印</text>
+    <rect x="630" y="270" width="150" height="40" rx="8" fill="#fff" stroke="#cbd5e1"/><text x="705" y="295" text-anchor="middle">④ 返回结果</text>
+  </g>
+  <path d="M210 290 L248 290" stroke="#4f46e5" stroke-width="2" marker-end="url(#dc)"/>
+  <path d="M400 290 L438 290" stroke="#4f46e5" stroke-width="2" marker-end="url(#dc)"/>
+  <path d="M590 290 L628 290" stroke="#4f46e5" stroke-width="2" marker-end="url(#dc)"/>
+  <text x="40" y="340" font-size="12" fill="#92400e">用 functools.wraps 保留原函数的名字与文档，否则内省/框架会认错函数</text>
+</svg>

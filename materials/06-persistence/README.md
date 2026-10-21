@@ -4,6 +4,8 @@
 
 ## 概念心智模型
 
+![ORM 常见坑：N+1 查询](../_shared/assets/n-plus-1.svg)
+
 - **持久化 = 数据重启不丢**：内存数据服务一重启就没了，真实服务要存进数据库。开发用 SQLite（零配置、一个文件），生产常用 PostgreSQL。
 - **SQL 基础要懂**：表（table）、行（row）、列（column）、主键（唯一标识一行）、外键（指向另一张表）、增删改查（INSERT/SELECT/UPDATE/DELETE）。
 - **ORM 是便利，不是魔法**：SQLAlchemy 让你用 Python 对象操作表、少写 SQL；但你必须**能看懂它生成的 SQL**，否则会写出低效查询。

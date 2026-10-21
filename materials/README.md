@@ -41,6 +41,33 @@
 - [`_shared/ecosystem-map.md`](./_shared/ecosystem-map.md) — 后端生态"选库地图"
 - [`_shared/glossary.md`](./_shared/glossary.md) — 术语表
 
+## 多模态资料（不只 Markdown）
+
+课程资料提供多种表现形式，互为补充：
+
+- **🏠 课程主页（HTML）**：[`index.html`](./index.html) — 可视化总入口，嵌入路线图、模块导航卡片、资源链接。**建议在浏览器中打开。**
+- **📄 PDF 讲义**：[`_shared/ai-collaboration-checklist.pdf`](./_shared/ai-collaboration-checklist.pdf) — AI 协作检查清单的可打印速查卡，适合随身/发给学生。
+- **🌐 交互速查页（HTML）**：
+  - [`_shared/ai-checklist-card.html`](./_shared/ai-checklist-card.html) — AI 协作清单网页版（PDF 的源）
+  - [`_shared/http-reference.html`](./_shared/http-reference.html) — HTTP 方法与状态码速查
+- **🖼 图解（SVG，矢量可缩放）**，位于 [`_shared/assets/`](./_shared/assets/)，已嵌入对应讲义，每个模块至少一张：
+  - `course-roadmap.svg` — 课程路线图（主页）
+  - `env-isolation.svg` — 虚拟环境隔离（模块 0）
+  - `names-and-objects.svg` — 变量是标签/可变 vs 不可变（模块 1）
+  - `decorator.svg` — 装饰器工作原理（模块 2）
+  - `choose-library.svg` — 选库决策流程（模块 3）
+  - `http-lifecycle.svg` — HTTP 请求生命周期（模块 4）
+  - `validation-gate.svg` — Pydantic 校验门（模块 5）
+  - `n-plus-1.svg` — ORM 的 N+1 查询坑（模块 6）
+  - `sync-vs-async.svg` — 同步 vs 异步（模块 7）
+  - `auth-flow.svg` — 认证与授权流程（模块 8）
+  - `testing.svg` — 测试金字塔 + 识破假通过（模块 9）
+  - `deploy-pipeline.svg` — 打包与部署流水线（模块 10）
+  - `backend-architecture.svg` — 后端分层架构（项目说明）
+  - `project-evolution.svg` — 项目演进 S0→S8（项目说明）
+
+> 阅读建议：浏览器开 `index.html` 纵览全局与速查，编辑器/仓库里读 Markdown 讲义深入细节，PDF 打印随身。
+
 ## 每份讲义的统一结构
 
 > 概念心智模型 → 最小可运行示例 → 常见坑 → "和 AI 这样协作" → 本周任务
