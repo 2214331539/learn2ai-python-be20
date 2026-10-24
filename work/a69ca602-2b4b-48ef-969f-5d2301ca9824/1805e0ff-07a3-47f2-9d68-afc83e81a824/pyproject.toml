@@ -1,0 +1,6 @@
+[project]
+name = "taskbox-s0"
+version = "0.1.0"
+description = "作业一：个人任务清单 S0 雏形"
+requires-python = ">=3.11"
+dependencies = []
